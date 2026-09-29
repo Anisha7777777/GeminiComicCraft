@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head><title>Comic Preview</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+    <div class="container">
+        <h1>📖 {{ story_prompt }}</h1>
+        <a href="/export-success?pdf_path={{ pdf_path }}" class="btn">Download PDF</a><br>
+        {% for item in layout %}
+        <div class="panel-card">
+            <h2>Panel {{ item.panel_number }}: {{ item.title }}</h2>
+            <img src="{{ item.image_path }}" class="panel-image">
+            <p><em>{{ item.scene_description }}</em></p>
+            <div class="story-text">{{ item.story_text }}</div>
+        </div>
+        {% endfor %}
+        <a href="/" class="btn">Create Another</a>
+    </div>
+</body>
+</html>

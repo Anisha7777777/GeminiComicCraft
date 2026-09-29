@@ -1,0 +1,14 @@
+# Secrets
+.env
+
+# Python virtual environments
+comiccraft-env/
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated local files
+*.sqlite3
